@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Signin from "./components/Signin";
-import Signup from "./components/Signup";
+import Signin from "./components/User/Signin";
+import Signup from "./components/User/Signup";
 import Homepage from "./components/Homepage";
 import { auth } from "./firebase";
 
 function App() {
-  const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -14,8 +14,7 @@ function App() {
     });  
     return () => unsubscribe();
   }, []);
-  console.log(user);
-
+  
   function handleSignOut() {
     auth.signOut();
     setUser(null);
