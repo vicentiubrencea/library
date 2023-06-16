@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 120px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 3, 0, 0.5);
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 1.75rem;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-image{
+    width: 330px;
+    border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 3, 0, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.header-quote {
+    font-style: italic;
+    font-size: 1.75rem;
+    margin-right: auto;
+    padding-left: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-button {
+    font-size: 1.5rem;
+    font-style: inherit;
+    border-radius: 10px;
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.signin-container {
+    text-align: center;
+    color: #A626D3;
+    padding: 10px;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+      
+}
+ 
+.signin-email {
+    height: 25px;
+    border-radius: 5px;
+}
+.signin-password {
+    height: 25px;
+    border-radius: 5px;
+}
+.signin-button {
+    font-size: 1rem;
+    font-style: inherit;
+    border-radius: 5px;
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+.signup-container {
+    text-align: center;
+    color: #A626D3;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+      
+}
+
+.signup-name {
+    height: 25px;
+    border-radius: 5px;
+}
+.signup-email {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.signup-password {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.signup-button {
+    font-size: 1rem;
+    font-style: inherit;
+    border-radius: 5px;
+    font-family: "Karla", sans-serif;
+    margin: 0;
 }

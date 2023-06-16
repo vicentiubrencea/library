@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
+import Homepage from "./components/Homepage";
+import { auth } from "./firebase";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      user ? setUser(user) : setUser(null);
+    });  
+    return () => unsubscribe();
+  }, []);
+  console.log(user);
+
+  function handleSignOut() {
+    auth.signOut();
+    setUser(null);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      {user ? null : <Signin />}
+      {user ? null : <Signup />}
+      {user ? <Homepage onSignOut={handleSignOut} />: null}
     </div>
   );
 }
 
 export default App;
+
